@@ -14,11 +14,11 @@ from PIL import Image
 
 features_blobs = []
 
-fw = open("results.txt", "a+")
+fw = open("output/results.txt", "a+")
 
 import sqlite3
 import json
-conn = sqlite3.connect('test.db')
+conn = sqlite3.connect('output/test.db')
 
 
 def load_labels():
