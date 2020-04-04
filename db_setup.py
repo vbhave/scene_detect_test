@@ -1,7 +1,3 @@
-#import os
-#os.
-#os.mkdir('output')
-
 import sqlite3
 conn = sqlite3.connect('output/test.db')
 
