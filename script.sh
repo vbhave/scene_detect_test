@@ -19,7 +19,7 @@ progress-bar() {
 }
 
 python3 db_setup.py
-
+echo "Started Working on Dataset. Check Progres Bar below - "
 counter=1
 for entry in $(ls $directory_name)
 do  
