@@ -1,6 +1,8 @@
 #!/bin/bash
-mkdir output
+
 directory_name=/home/osboxes/Desktop/scene_detection/directory_images/
+mkdir output
+
 file_count=$(ls $directory_name | wc -l)
 
 progress-bar() {
