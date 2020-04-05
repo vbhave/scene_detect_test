@@ -4,30 +4,40 @@ The objective of this project is given an input image, develop a model which sha
 # Instructions to Setup the Environment and Execute the Code
 
 1. Download the code in this repository.
-git clone https://github.com/vbhave/scene_detect_test/
+
+<b> git clone https://github.com/vbhave/scene_detect_test/ </b>
+
+Ensure that you navigate in the directory. If you do git clone also do 
+
+<b> cd scene_detect_test </b>
 
 2. Create a new conda environment to simplify the installation of all dependencies. 
-conda create --name sceneDetect python=3.7.4     
+
+<b> conda create --name sceneDetect python=3.7.4 </b>
 
 3. Activate the new conda environment. 
-conda activate sceneDetect
+
+<b> conda activate sceneDetect </b>
 
 4. Give executable permissions to a script to install the requirements and comply other directory structure requirements. 
-chmod +x conda_create.sh
+
+<b> chmod +x conda_create.sh </b>
 
 5. Execute the above script
-./conda_create.sh
+
+<b> ./conda_create.sh </b>
 
 6. Open script.sh and on line 3, change the path to the directory containing the images you want to execute this code on.
 
 7. Execute the script which shall predict the scene class and the attributes of the image. 
-./script.sh
+
+<b> ./script.sh </b>
 
 The output should be generated in the output directory. The output consists of a results.txt file and a test.db database. The results.txt is a text file containing the name of each image, the top 5 classes with their confidence scores and the attributes. 
 
 The test.db is a SQLite database. It consists of only one table 'scene_detection'. This table shall consist of 4 columns, first one being image name which shall also act as the primary key of the table. The second column stores whether the image is in an indoor or outdoor environment. The third column contains a json object of the top 5 scene classes and their respective confidence scores. The fourth and last column is a comma separated list of the attributes of the image.
 
-<b> Note: </b> You may encounter an error like the 'Bleach' package has not been installed. This package is not a requirement to execute the code in this directory. So it's safe to ignore that. 
+<b> Note: </b> You may encounter an error like the 'Bleach' package has not been installed. This package is not a requirement to execute the code in this repository. So it's safe to ignore that. 
 
 # Directory Structure - 
 
