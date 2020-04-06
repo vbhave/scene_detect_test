@@ -15,6 +15,8 @@ Ensure that you navigate in the directory. If you do git clone also do
 
 <b> conda create --name sceneDetect python=3.7.4 </b>
 
+You may have to press 'y' one or more times to complete the installation. (As far as I know there is never a security issue to execute this command and the permission is taken just to obtain storage space for the execution of the operation.)
+
 3. Activate the new conda environment. 
 
 <b> conda activate sceneDetect </b>
@@ -22,6 +24,8 @@ Ensure that you navigate in the directory. If you do git clone also do
 4. Give executable permissions to a script to install the requirements and comply other directory structure requirements. 
 
 <b> chmod +x conda_create.sh </b>
+
+You may encounter a error like rm: cannot remove 'output': No such file or directory. It is safe to ignore this since the script tries to delete a directory which may or may not exist. In case the directory does not exist, such an error message gets displayed.
 
 5. Execute the above script
 
