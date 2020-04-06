@@ -1,6 +1,5 @@
 #!/bin/bash
-#directory_name=/home/osboxes/Desktop/scene_detection/directory_images/
-directory_name=/home/osboxes/Desktop/scene_detection/img_dir/
+directory_name=/home/osboxes/Desktop/scene_detection/directory_images/
 mkdir output
 
 file_count=$(ls $directory_name | wc -l)
