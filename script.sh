@@ -1,14 +1,14 @@
 #!/bin/bash
-
-directory_name=/home/osboxes/Desktop/scene_detection/directory_images/
+#directory_name=/home/osboxes/Desktop/scene_detection/directory_images/
+directory_name=/home/osboxes/Desktop/scene_detection/img_dir/
 mkdir output
 
 file_count=$(ls $directory_name | wc -l)
 
 progress-bar() {
   local duration=${1}
-    already_done() { for ((done=0; done< (( ((($duration)*40)/($elapsed)) )); done++)); do printf "▇"; done }
-    remaining() { for ((remain=$elapsed; remain< 60 - (( (($duration)*40)/($elapsed) )) ;  remain++)); 
+    already_done() { for ((done=0; done< (( ((($duration)*60)/($elapsed)) )); done++)); do printf "▇"; done }
+    remaining() { for ((remain=0; remain< 60 - (( (($duration)*60)/($elapsed) )) ;  remain++)); 
     		do printf " "; done }
     percentage() { printf "| %s%%" $(( (($duration)*100)/($elapsed)*100/100 )); }
     clean_line() { printf "\r"; }

@@ -133,8 +133,7 @@ def get_scene_attributes(img_name):
     # load the test image    
     img = Image.open(img_name)
 
-    if img.mode != 'RGB':
-        print("from not rgb image")
+    if img.mode != 'RGB':        
         img = img.convert("RGB")
     input_img = V(tf(img).unsqueeze(0))
 
