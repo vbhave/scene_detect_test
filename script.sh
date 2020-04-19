@@ -32,15 +32,6 @@ do
 done
 counter=$((counter - 1))
 end_time=$(date)
-echo "start time is ${start_time}" >> output/stats.txt
-echo "end time is ${end_time}" >> output/stats.txt
-#let "total_time = ${end_time} - ${start_t ime}"
 let "total_time = $(( $(date -d "$end_time" "+%s") - $(date -d "$start_time" "+%s") ))"
-echo "time taken is ${total_time}" >> output/stats.txt
-echo "Number of images computed is ${counter}" >> output/stats.txt
+echo "Took ${total_time} seconds to compute over ${counter} images." >> output/stats.txt
 echo " "
-#echo "Number of images computed is ${counter}"
-#let ttpi=time_taken/counter
-#ttpi=$((time_taken / counter))
-#echo "$ttpi"
-#echo "Time Taken Per Image is $ttpi" >> output/stats.txt
