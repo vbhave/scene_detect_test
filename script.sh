@@ -1,5 +1,9 @@
 #!/bin/bash
+start_time=$(date)
 directory_name=/home/osboxes/Desktop/scene_detection/directory_images/
+#directory_name=/home/osboxes/Desktop/scene_detection/grayscale
+#directory_name=/home/osboxes/Desktop/places365/val_256
+
 mkdir output
 
 file_count=$(ls $directory_name | wc -l)
@@ -26,3 +30,17 @@ do
   progress-bar counter
   counter=$((counter + 1))
 done
+counter=$((counter - 1))
+end_time=$(date)
+echo "start time is ${start_time}" >> output/stats.txt
+echo "end time is ${end_time}" >> output/stats.txt
+#let "total_time = ${end_time} - ${start_t ime}"
+let "total_time = $(( $(date -d "$end_time" "+%s") - $(date -d "$start_time" "+%s") ))"
+echo "time taken is ${total_time}" >> output/stats.txt
+echo "Number of images computed is ${counter}" >> output/stats.txt
+echo " "
+#echo "Number of images computed is ${counter}"
+#let ttpi=time_taken/counter
+#ttpi=$((time_taken / counter))
+#echo "$ttpi"
+#echo "Time Taken Per Image is $ttpi" >> output/stats.txt
