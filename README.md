@@ -61,3 +61,48 @@ python3 create_directories_basic.py <input_image_dir> <output_dir>
 <b> unified.py -> </b> The actual python code using a ResNet-18 model to predict the scene classes and the attributes. 
 
 Rest all files like - categories_places365.txt, IO_places365.txt, labels_sunattribute.txt, and any other files which may get downloaded later during the execution of the code are like index files/lookup tables, required for the execution of the ResNet-18 model and should not be modified. 
+
+
+# Timeline
+
+# Week 1 - 2/14/2020 - 2/20/2020
+
+I used a pretrained state of the art resnet model, trained on the Places365 dataset. The model gets reasonably good accuracy while tested on some sample random images. 
+
+The current my_basic.py, downloads the weights of the pretrained resnet model, also downloads a bunch of sample images and prints on terminal the top 5 categories of each image. 
+
+# Week 2 - 2/21/2020 - 2/27/2020
+
+* I explored the Places 205 dataset which had fewer categories. However, the categories added in Places365, are of importance to this task and hence I decided to continue work on Places 365. 
+* Worked with Kautilya to create API's as per the Image Similarity Task Requirement.
+
+# Week 3 - 2/28/2020 - 3/5/2020
+
+* I found a pretrained resnet model which when given an input image can classify whether the image is in an indoor or outdoor setting. 
+* The same model can also be used to identify the scene attributes of an input image. However, I am unable to run the model in a loop, and works only when input one image at a time. However, the attributes produced by the model are extremely informative and can be used as features for other tasks.
+
+# Week 4 - 3/6/2020 - 3/12/2020
+* I took a pass this week to prepare for my mid terms of other courses. 
+
+# Week 5 - 3/13/2020 - 3/19/2020
+* Spring Break
+
+# Week 6 - 3/20/2020 - 3/26/2020
+* Modified the code to determine scene attributes in batch mode. 
+* Resized images to get model to work on all kinds of images like those captured by laptops, mobile devices, datasets, etc.
+
+# Week 7 - 3/27/2020 - 4/2/2020
+* Worked on modularizing and packaging my code.
+* Added installation instructions and other details to ship it to Dan.
+* Had a meeting with Jagath. Using his remote access he tested the working of my code on Dan's machine on a few sample images. 
+
+# Week 8 - 4/3/2020 - 4/9/2020
+* Added some more features to my package like creating a progress bar in bash script. 
+* Ran a baseline image colorization model. Used this model to convert grayscale images into colored images and got some improvement in scene detection results using the colorized images. (The confidence scores of the detected scene improved as compared to the model working on grayscale images.)
+
+# Week 9 - 4/10/2020 - 4/16/2020
+* I took a pass this week to catch up with assignments of other courses.
+
+# Week 10 - 4/17/2020 - 4/23/2020
+* I plan to benchmark my model on the validation set of Places365 dataset. 
+* I shall comment and document my code.
