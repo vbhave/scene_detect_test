@@ -1,0 +1,8 @@
+README.md
+setup.py
+scene_detection.egg-info/PKG-INFO
+scene_detection.egg-info/SOURCES.txt
+scene_detection.egg-info/dependency_links.txt
+scene_detection.egg-info/not-zip-safe
+scene_detection.egg-info/requires.txt
+scene_detection.egg-info/top_level.txt
