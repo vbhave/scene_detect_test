@@ -104,5 +104,9 @@ The current my_basic.py, downloads the weights of the pretrained resnet model, a
 * I took a pass this week to catch up with assignments of other courses.
 
 # Week 10 - 4/17/2020 - 4/23/2020
-* I plan to benchmark my model on the validation set of Places365 dataset. 
-* I shall comment and document my code.
+* I benchmarked my model on the validation set of Places365 dataset. 
+* I have commented and documented my code.
+
+# Week 11 - 4/24/2020 - 4/30/2020
+* Worked on getting some results like interesting scene categories, scene categories with highest precision, recall, F1 scores.
+* Worked on my Final Week Presentation.
