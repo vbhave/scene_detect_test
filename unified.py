@@ -166,12 +166,12 @@ def get_scene_attributes(img_name):
     io_image = np.mean(labels_IO[idx[:10]]) # vote for the indoor or outdoor
     env_type = ""
     if io_image < 0.5:
-        fw.write('--TYPE OF ENVIRONMENT: indoor' + '\n')    
+        #fw.write('--TYPE OF ENVIRONMENT: indoor' + '\n')    
         env_type = 'indoor'
     else:
-        fw.write('--TYPE OF ENVIRONMENT: indoor' + '\n')
+        #fw.write('--TYPE OF ENVIRONMENT: indoor' + '\n')
         env_type = 'outdoor'
-
+	
     # output the scene categories
     fw.write('--SCENE CATEGORIES:')
     scene_categories_dict = {}

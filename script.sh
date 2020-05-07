@@ -5,7 +5,8 @@
 start_time=$(date)
 # enter the absolute path to the directory containing all images of the 
 # test set
-directory_name=/home/osboxes/Desktop/scene_detection/directory_images/
+#directory_name=/home/osboxes/Desktop/scene_detection/directory_images/
+directory_name=/home/osboxes/Desktop/benchmarking/demo_images/
 
 #directory_name=/home/osboxes/Desktop/scene_detection/grayscale
 #directory_name=/home/osboxes/Desktop/places365/val_256
